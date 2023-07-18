@@ -1,0 +1,27 @@
+#!/bin/bash
+i=$1
+weighted=$2
+embeddings=$3
+
+#source myvenv/bin/activate
+export ALLENNLP_CACHE_ROOT=$(pwd)
+export TORCH_HOME=$(pwd)
+export PYTORCH_TRANSFORMERS_CACHE=$(pwd)
+
+if [ "$weighted" == "true" ];then
+  output=data/doc-embeddings/documents-$i-weighted-$embeddings.csv
+  if [ -e $output ];then
+    echo "Already exists: $output"
+  else
+    touch $output
+    python3 src/python/weighted-embed.py --input-file data/documents/arguments-$i.csv --id-column document.id --text-column text --weights-file data/doc-embeddings/document-weights.csv --weight-column idf --embedding-type $embeddings --output-file $output 
+  fi
+else
+  output=data/doc-embeddings/documents-$i-$embeddings.csv
+  if [ -e $output ];then
+    echo "Already exists: $output"
+  else
+    touch $output
+    python3 src/python/embed.py --input-file data/documents/arguments-$i.csv --id-column document.id --text-column text --embedding-type $embeddings --output-file $output
+  fi
+fi

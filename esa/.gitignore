@@ -1,0 +1,14 @@
+data
+myvenv
+__pycache__
+test-*-output.csv
+test-*-preprocessed.csv
+test-*-idf.csv
+test-*-vocabulary.csv
+test-*-esa.csv
+test-*-esa-reduced.csv
+test-suggestions.csv
+test-suggestions-reduced.csv
+test-top-suggestions.csv
+concepts
+run.sh

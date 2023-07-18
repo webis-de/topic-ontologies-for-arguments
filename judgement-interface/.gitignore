@@ -1,0 +1,16 @@
+/concepts
+/bin/
+build/
+out/
+.gradle/
+.idea/
+*.iml
+/test.zip
+/arguments.json
+/.classpath
+/.project
+.settings/
+/index/
+query.log
+/judgements.json
+server.logs

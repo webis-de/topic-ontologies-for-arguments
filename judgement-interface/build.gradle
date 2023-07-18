@@ -1,0 +1,41 @@
+// Apply plugins
+
+plugins {
+  id 'com.github.johnrengelman.shadow' version '4.0.2'
+  id 'java'
+}
+
+jar {
+  manifest {
+    attributes "Main-Class": "de.webis.JudgementServer"
+  }
+}
+
+version = '0.0.1'
+
+// Basic configuration and settings for all (sub-)projects
+allprojects {
+    group = 'de.webis.arguana'
+    version = version
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    // Set source file encoding
+    compileJava.options.encoding = "UTF-8"
+    compileTestJava.options.encoding = "UTF-8"
+    javadoc.options.encoding = 'UTF-8'
+
+    // Declare global dependencies
+    dependencies {
+        implementation group: 'org.eclipse.jetty', name: 'jetty-servlet', version: '9.4.15.v20190215'
+        implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.7'
+        implementation group: 'com.opencsv', name: 'opencsv', version: '5.1'
+    }
+}
+
+javadoc {
+    options.tags = [ "generated", "modifiable", "ordered" ]
+}
+
+// Include Artifactory configuration
+apply from: 'artifactory.gradle'

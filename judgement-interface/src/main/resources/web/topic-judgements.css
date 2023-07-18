@@ -1,0 +1,76 @@
+html, body, form {
+  height: 100%;
+}
+
+form {
+  display: grid;
+  grid-template-rows: calc(50% - 50px) calc(50% - 50px) 50px;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.card-body {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.page:not(.active) {
+  display: none;
+}
+
+.card-body {
+  flex-basis: 50%;
+}
+.page {
+  grid-column-end: span 2;
+}
+.page .topic-suggestions {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: -2%;
+  align-content: flex-start;
+  overflow-x: auto;
+}
+.page .topic-suggestions .topic-suggestion {
+  width: 18%;
+  margin-left: 2%;
+}
+.page .topic-suggestions .topic-suggestion:nth-child(2n+1) {
+  background-color: lightgray;
+}
+.page .topic-suggestions .topic-suggestion.positive {
+  background-color: lightgreen;
+}
+.page .topic-suggestions .topic-suggestion.negative {
+  background-color: lightcoral;
+}
+.page .topic-suggestions .topic-suggestion.active {
+  background-color: aqua;
+}
+.page .topic-suggestions .topic-suggestion > span {
+  display: table-cell;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: middle;
+}
+.page .topic-suggestions .topic-suggestion span:first-child {
+  width: 100%;
+}
+.page .topic-suggestions .topic-suggestion span:nth-child(2) {
+  background-color: lightgreen;
+}
+.page .topic-suggestions .topic-suggestion span:nth-child(3) {
+  background-color: lightcoral;
+}
+
+nav {
+  grid-column-end: span 2;
+}
+nav ul {
+  justify-content: center;
+}
+
+#documentText {
+  white-space: pre-line;
+}

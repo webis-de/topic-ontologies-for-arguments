@@ -1,0 +1,5 @@
+numpy
+nltk
+pandas
+torch
+pytorch_pretrained_bert
