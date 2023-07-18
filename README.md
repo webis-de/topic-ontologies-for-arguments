@@ -1,7 +1,7 @@
 ## Topic Ontologies for Arguments
 
 This repository contains the code and evaluation scripts for matching the data of 59 argument corpora with three topic 
-ontologies. The data used in this experiment canb e found  [here](https://zenodo.org/record/5180409).
+ontologies. The data used in this experiment can be found  [here](https://zenodo.org/record/5180409).
 
 ### Preprocessing 59 argument corpora 
 The units and topics sof 59 argument corpora were cleaned and organized with an individual script for each corpus in 
@@ -30,7 +30,7 @@ To evaluate the suggestions of the three approaches the following script can be 
 [automatic topic matching evaluation](automatic_topic_matching_evaluation)
 
 ### Judgement Interface
-The judgement interface were used for both manual matching of units with the three topic ontologies and the evaluation 
+The judgement interface was used for both manual matching of units with the three topic ontologies and the evaluation 
 of the automatic appraoches.
 
 [judgement interface](judgement-interface)
