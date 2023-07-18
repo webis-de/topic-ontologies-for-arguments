@@ -12,7 +12,7 @@ Manually matching the topics of 39 argument corpora with the topics of three top
 Candidate topic matches were generated using BM25 (Whoosh) in 
 [manual topic_matching](manual_topic_matching)
 
-### Matching the units of a sample with the topics of three topic ontologies u
+### Matching the a sample of 104 with the topics of three topic ontologies
 Automatically matching units with topic ontologies were implemented using two approaches semantic indexing (explicit semantic analysis)
 and bert (and other transformers). These approaches were evaluated in a depth of 5 pooling setup which was carried out using the 
 judgement interface. The implementation for the two aproaches can be found here and a baseline can be found here.
