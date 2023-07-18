@@ -1,7 +1,7 @@
 ## Topic Ontologies for Arguments
 
 This repository contains the code and evaluation scripts for matching the data of 59 argument corpora with three topic 
-ontologies. The data used in this experiment canb e found  [here](https://zenodo.org/record/5180062/export/json).
+ontologies. The data used in this experiment canb e found  [here](https://zenodo.org/record/5180409).
 
 ### Preprocessing 59 argument corpora 
 The units and topics sof 59 argument corpora were cleaned and organized with an individual script for each corpus in 
