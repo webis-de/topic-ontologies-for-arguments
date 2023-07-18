@@ -6,7 +6,7 @@ ontologies. The data used in this experiment can be found  [here](https://zenodo
 ### Preprocessing 59 argument corpora 
 The units and topics sof 59 argument corpora were cleaned and organized with an individual script for each corpus in 
 [preprocessing](preprocessing)
-### Preparing for Manual matching 
+### Preparing for manual matching 
 
 Manually matching the topics of 39 argument corpora with the topics of three topic ontologies was done manually using the judgment interface. 
 Candidate topic matches were generated using BM25 (Whoosh) in 
